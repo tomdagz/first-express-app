@@ -6,6 +6,7 @@ let router = express.Router();
 
 router.route('/sessions')
     .get(sessionsController.new)
-    .post(sessionsController.create);
+    .post(sessionsController.create)
+    .delete(sessionsController.destroy);
 
 module.exports = router;
