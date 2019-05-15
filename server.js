@@ -6,6 +6,7 @@ const sequelize_package = require('sequelize');
 const app = express();
 
 const registrationRoutes = require('./routes/registration_routes');
+const sessionsRoutes = require('./routes/session_routes')
 
 app.use(bodyParser.urlencoded(
     {
@@ -15,5 +16,6 @@ app.use(bodyParser.urlencoded(
 app.set('view engine', 'pug');
 
 app.use(registrationRoutes);
+app.use(sessionsRoutes);
 
 app.listen(3000);

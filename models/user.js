@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = function(models) {
     // associations can be defined here
   };
-  user.login = function(email, password) {
+  User.login = function(email, password) {
     return User.findOne({
       where: {
         email: email
